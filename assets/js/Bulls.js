@@ -24,7 +24,7 @@ function Bulls() {
 
   function makeGuess(guess) {
 	  if (state.isGameOver) {
-	  	console.log("GameIsOverNoGuessing");
+	  	console.log("GameIsOverNoMoreGuessing");
 	  }
 	  else {
 	  	console.log(guess);

@@ -8,7 +8,7 @@ defmodule Bulls.Game do
 
             guesses: [],
 
-            currGuess: "",
+            bullsCowsList: [],
 
             isGameOver: false
 
@@ -39,6 +39,8 @@ defmodule Bulls.Game do
                     secret: st.secret,
 
                     guesses: st.guesses ++ [guess],
+
+		    bullsCowsList: st.bullsCowsList ++ [calcBullsCows(st, guess)],
 
                     # TODO
 
@@ -121,7 +123,6 @@ defmodule Bulls.Game do
 
     end
 
-    
 
     # assume the inputted guess is valid (4 unique digits)
 
