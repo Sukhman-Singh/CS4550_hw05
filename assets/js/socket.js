@@ -96,3 +96,5 @@ export function ch_reset() {
 channel.join()
        .receive("ok", state_update)
        .receive("error", resp => { console.log("Unable to join", resp) });
+
+export default socket

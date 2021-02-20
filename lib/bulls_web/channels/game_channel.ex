@@ -31,9 +31,9 @@ defmodule BullsWeb.GameChannel do
 	game = Bulls.Game.new()
 	socket = assign(socket, :game, game)
 	view = Bulls.Game.view(game)
-    {:reply, {:ok, view}, socket}
-
+    	{:reply, {:ok, view}, socket}
   end
+
   # It is also common to receive messages from the client and
   # broadcast to everyone in the current topic (game:lobby).
   @impl true

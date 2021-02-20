@@ -3,7 +3,6 @@ import "phoenix_html";
 import ReactDOM from 'react-dom';
 import {ch_reset, ch_join, ch_push} from "./socket";
 
-
 function Bulls() {
   const [state, setState] = useState({
     guesses: [],
@@ -18,7 +17,6 @@ function Bulls() {
 	isGameOver} = state;
 
   useEffect(() => {
-	console.log("sukhmansinghiscool");
    	ch_join(setState);
   });
 
