@@ -2,7 +2,7 @@ defmodule BullsWeb.GameChannel do
   use BullsWeb, :channel
 
   @impl true
-  def join("game:" <> _id, payload, socket) do
+  def join("game:1" <> _id, payload, socket) do
     if authorized?(payload) do
 	game = Bulls.Game.new()
 	socket = assign(socket, :game, game)
