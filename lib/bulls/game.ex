@@ -23,7 +23,7 @@ defmodule Bulls.Game do
                     guesses: st.guesses ++ [guess],
 		    bullsCowsList: st.bullsCowsList ++ [calcBullsCows(st, guess)],
                     # TODO
-                    isGameOver: isTheGameOver(st)
+                    isGameOver: isTheGameOver(st.guesses ++ [guess], st.secret)
                 }
 
             else
@@ -34,9 +34,11 @@ defmodule Bulls.Game do
         end
     end
 
-    def isTheGameOver(st) do
-	if (length(st.guesses) > 0) do
-        	String.equivalent?(Enum.at(st.guesses, length(st.guesses) - 1), st.secret) or (length(st.guesses) >= 8)
+    def isTheGameOver(guesses, secret) do
+	if (length(guesses) > 0) do
+	IO.inspect "isTheGameOverFunction is called"
+	IO.inspect guesses
+        	String.equivalent?(Enum.at(guesses, length(guesses) - 1), secret) or (length(guesses) >= 8)
 	else
 		false
 	end
