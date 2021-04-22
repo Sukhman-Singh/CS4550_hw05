@@ -28,6 +28,7 @@ function Bulls() {
 	  	console.log(guess);
 		ch_push({letter: guess});
 	  }
+	  setCurrGuess("");
   }
 
   function keypress(ev) {
